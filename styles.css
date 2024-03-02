@@ -1,33 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Varela+Round&display=swap");
+
 body {
+  background-color: antiquewhite;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+nav {
+  font-family: "Ubuntu", sans-serif;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  height: 120px;
+  background-color: black;
+  color: white;
+}
+nav ul li {
+  padding: 0 12px;
+}
+.brand img {
+  width: 210px;
+  padding: 0 15px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  font-weight: bolder;
+  font-size: 1.3rem;
+}
+.container {
+  min-height: 65vh;
+  background-color: black;
+  color: white;
+  font-family: "Varela Round", sans-serif;
+  display: flex;
+  width: 70%;
+  margin: 23px auto;
+  border-radius: 12px;
+  padding: 20px;
+  background-image: url("SongBackgd.jpg");
+  background-size: cover; /* Resize the background image to cover the entire container */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  height: 300px; /* Set the height of the container */
+  width: 70%; /* Set the width of the container */
+}
+.bottom {
+  position: sticky;
+  height: 100px;
+  background-color: black;
+  color: white;
+  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
-  background-color: #b710fe; /* Set your desired background color */
+  flex-direction: column;
 }
-
-.container {
+.icons {
+  margin-top: 14px;
+  cursor: pointer;
+}
+#myProgressBar {
+  width: 80vw;
   text-align: center;
+  cursor: pointer;
 }
 
-.box {
-  background-color: #e40ba7; /* Set your desired background color for the box */
-  padding: 20px;
+.songItemContainer {
+  margin-top: 24px;
+}
+
+.songItem {
+  height: 50px;
+  display: flex;
+  background-color: white;
+
+  color: black;
+  margin: 12px 0;
+  justify-content: space-between;
+  align-items: center;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for a stylish look */
-  max-width: 300px; /* Set the maximum width of the box */
-  margin: 0 auto; /* Center the box horizontally */
 }
-.movie-list {
-  list-style: none; /* Remove the default list styles */
-  padding: 0; /* Remove default padding */
-  border: 2px solid #ccc; /* Add a border around the list */
-  border-radius: 5px; /* Add border radius for a rounded look */
+.songItem img {
+  width: 30px;
+  margin: 0 10px;
+  border-radius: 34px;
+}
+.timestamp {
+  margin: 0 23px;
+}
+.timestamp i {
+  cursor: pointer;
+}
+.songinfo {
+  position: absolute;
+  left: 10vw;
+  font-family: "Varela Round", sans-serif;
 }
 
-.list-items {
-  list-style: none; /* Remove the default list styles */
-  padding: 10px 0;
-  border-bottom: 1px solid #ccc; /* Add a border between list items */
+.songinfo img {
+  opacity: 0;
+  transition: opacity 0.4s ease-in;
 }
